@@ -7,7 +7,7 @@ const Mapping=({fname})=>{
         <div>
             <h1>Mapping</h1>
             {fname.map((name)=>(
-               <h1>{fname}</h1> 
+               <ul><li>{name}</li></ul> 
             ))}
         </div>
     )

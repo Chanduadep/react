@@ -36,6 +36,15 @@ function Navbar() {
     function Topropdrilling(){
         router("/props")
     }
+    function Tomapping(){
+        router("/mapping")
+    }
+    function Todo(){
+        router("/todo")
+    }
+    function Tomapping2(){
+        router("/mapping2")
+    }
 
     return (
         <div className="parentDiv">
@@ -43,12 +52,15 @@ function Navbar() {
             {/* <h1 onClick={Tologin}>Login</h1> */}
             {/* {/* <h1 onClick={Toregister}>Register</h1> */  }
             <h1 onClick={Tocounter}>Counter</h1>
-            <h1 onClick={ToredirectEffect1}>useEffect1</h1>
-            <h1 onClick={ToredirectEffect2}>useEffect2</h1>
-            <h1 onClick={ToredirectEffect3}>useEfect3</h1>
-            <h1 onClick={ToredirectEffect4}>useEffect4</h1>
+            <h1 onClick={ToredirectEffect1}>useEfft1</h1>
+            <h1 onClick={ToredirectEffect2}>useEfft2</h1>
+            <h1 onClick={ToredirectEffect3}>useEft3</h1>
+            <h1 onClick={ToredirectEffect4}>useEfft4</h1>
             <h1 onClick={Touseparams}>useParams</h1>
             <h1 onClick={Topropdrilling}>PropDrilling</h1>
+            <h1 onClick={Tomapping}>Mapping1</h1>
+            <h1 onClick={Tomapping2}>Mapping2</h1>
+            <h1 onClick={Todo}>Todo</h1>
             
         </div>
     );

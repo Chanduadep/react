@@ -15,6 +15,8 @@ import UseParams from './components/24-08/UseParams';
 import Propdrilling from './components/24-08/Propdrilling';
 import  {useState} from "react";
 import Mapping from "./components/24-08/Mapping";
+import Todo from './components/25-08/Todo';
+import Mapping2 from "./components/24-08/Mapping2";
 
 
 
@@ -22,6 +24,7 @@ import Mapping from "./components/24-08/Mapping";
 
 function App() {
   const [fname,setfname]=useState(["sneha","pooja","anaida"]);
+ 
   const [counter,setCounter]=useState(1);
   function Inc(){
     setCounter(counter+1);
@@ -46,6 +49,8 @@ function App() {
      Inc={Inc}
      />}/>
      <Route path='/mapping' element={<Mapping fname={fname}/>}/>
+     <Route path='/mapping2' element={<Mapping2/>}/>
+     <Route path='/todo' element={<Todo/>}/>
   </Routes>
 
   </>
