@@ -11,10 +11,21 @@ import UseEffect1 from './components/23-08/useEffect1';
 import UseEffect2 from './components/23-08/useEffect2';
 import UseEffect3 from './components/23-08/useEffect3';
 import UseEffect4 from './components/23-08/useEffect4';
+import UseParams from './components/24-08/UseParams';
+import Propdrilling from './components/24-08/Propdrilling';
+import  {useState} from "react";
+import Mapping from "./components/24-08/Mapping";
+
+
 
 
 
 function App() {
+  const [fname,setfname]=useState(["sneha","pooja","anaida"]);
+  const [counter,setCounter]=useState(1);
+  function Inc(){
+    setCounter(counter+1);
+  }
   return(
   <>
   <Navbar />
@@ -28,6 +39,13 @@ function App() {
     <Route path='/useeffect2' element={<UseEffect2/>}/>
     <Route path='/useeffect3' element={<UseEffect3/>}/>
     <Route path='/useeffect4' element={<UseEffect4/>}/>
+    <Route path='/products/:id' element={<UseParams/>}/>
+    <Route path='/props'
+     element={<Propdrilling fname={["sneha","pooja","anaida"]}
+     counter={counter}
+     Inc={Inc}
+     />}/>
+     <Route path='/mapping' element={<Mapping fname={fname}/>}/>
   </Routes>
 
   </>

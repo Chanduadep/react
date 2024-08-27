@@ -30,6 +30,12 @@ function Navbar() {
     function ToredirectEffect4(){
         router("/useeffect4")
     }
+    function Touseparams(){
+        router("/products/:id")
+    }
+    function Topropdrilling(){
+        router("/props")
+    }
 
     return (
         <div className="parentDiv">
@@ -41,7 +47,8 @@ function Navbar() {
             <h1 onClick={ToredirectEffect2}>useEffect2</h1>
             <h1 onClick={ToredirectEffect3}>useEfect3</h1>
             <h1 onClick={ToredirectEffect4}>useEffect4</h1>
-
+            <h1 onClick={Touseparams}>useParams</h1>
+            <h1 onClick={Topropdrilling}>PropDrilling</h1>
             
         </div>
     );
