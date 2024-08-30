@@ -17,6 +17,8 @@ import  {useState} from "react";
 import Mapping from "./components/24-08/Mapping";
 import Todo from './components/25-08/Todo';
 import Mapping2 from "./components/24-08/Mapping2";
+import Dynamicstyling from "./components/29-08/Dynamicstyling";
+
 
 
 
@@ -30,7 +32,7 @@ function App() {
     setCounter(counter+1);
   }
   return(
-  <>
+  <> 
   <Navbar />
   <Routes>
     <Route path="*" element={<NotFound/>}/>
@@ -51,6 +53,8 @@ function App() {
      <Route path='/mapping' element={<Mapping fname={fname}/>}/>
      <Route path='/mapping2' element={<Mapping2/>}/>
      <Route path='/todo' element={<Todo/>}/>
+     <Route path='/dynamicstyling' element={<Dynamicstyling/>}/>
+     
   </Routes>
 
   </>
