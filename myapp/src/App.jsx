@@ -20,6 +20,7 @@ import Mapping2 from "./components/24-08/Mapping2";
 import Dynamicstyling from "./components/29-08/Dynamicstyling";
 import RegisterValidation from './components/31-08/RegisterValidation';
 import RegisterValidation2 from './components/31-08/RegisterValidation2';
+import UseReducer from './components/1-09/UseReducer';
 
 
 
@@ -58,6 +59,7 @@ function App() {
      <Route path='/mapping2' element={<Mapping2/>}/>
      <Route path='/todo' element={<Todo/>}/>
      <Route path='/dynamicstyling' element={<Dynamicstyling/>}/>
+     <Route path='/usereducer' element={<UseReducer/>}/>
      
   </Routes>
 

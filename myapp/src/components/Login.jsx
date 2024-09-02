@@ -62,13 +62,15 @@ function Login(){
             <div className='input-wra'>
             <label className='label-name'>Email:</label><br/>
             <input className='input-field' onChange={handleChange} type='email' placeholder='Type your email here..' name='email'/>
-            </div>
-            {formError?.email && <p>{formError?.email}</p>}<br/>
+            
+            {formError?.email && <p>{formError?.email}</p>}
+            </div><br/>
             <div className='input-wra'>
             <label className='label-name'>Password:</label><br/>
             <input className='input-field' onChange={handleChange} type='password' placeholder='Type your password here..' name='password'/>
-            </div>
-            {formError?.password && <p>{formError?.password}</p>}<br/>
+
+            {formError?.password && <p>{formError?.password}</p>}
+            </div><br/>
             <button className='login-button'>Login</button>
             </form>
         </div>

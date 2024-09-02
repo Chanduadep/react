@@ -89,56 +89,69 @@ function RegisterValidation2() {
     setErrors(errors);
   },[userData]);
   return (
-
-    <div className="parentdiv">
-      <div className="regi">
-        <h1>Register</h1>
-      </div>
+<div className="body">
+    <div className="login-container">
+     
+        <h1 className="form-title">Register</h1>
+      
       <div className="form">
-        <form onSubmit={handleSubmit}>
-          <label>Name</label>
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="input-wra">
+          <label className="label-name">Name</label>
           <br />
           <input
             onChange={handleChange}
             type="text"
             placeholder="Type your name.."
             name="name"
+            className="input-field"
           />
           {errors?.name && <p>{errors?.name}</p>}
+          </div>
           <br />
-          <label>Email</label>
+          <div className="input-wra">
+          <label className="label-name">Email</label>
           <br />
           <input
             onChange={handleChange}
             type="email"
             placeholder="Type your email.."
             name="email"
+            className="input-field"
           />
            {errors?.email && <p>{errors?.email}</p>}
+           </div>
           <br />
-          <label>Password </label>
+          <div className="input-wra">
+          <label className="label-name">Password </label>
           <br />
           <input
             onChange={handleChange}
             type="password"
             placeholder="Type your password.."
             name="password"
+            className="input-field"
           />
            {errors?.password && <p>{errors?.password}</p>}
+           </div>
           <br />
-          <label>ConfirmPassword </label>
+          <div className="input-wra">
+          <label className="label-name">ConfirmPassword </label>
           <br />
           <input
             onChange={handleChange}
             type="password"
             placeholder="Confirm your password.."
             name="confirmPassword"
+            className="input-field"
           />
            {errors?.confirmPassword && <p>{errors?.confirmPassword}</p>}
+           </div>
           <br />
-          <input className="button" type="submit" value="Register" />
+          <button className='login-button'>Login</button>
         </form>
       </div>
+    </div>
     </div>
   );
 }

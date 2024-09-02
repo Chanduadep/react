@@ -5,6 +5,7 @@ function Counter(){
 
     function Incr(){
         setCounter(counter+1);
+        
     }
     
     function Decr(){
