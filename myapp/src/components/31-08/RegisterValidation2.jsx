@@ -1,12 +1,18 @@
 
-import { useState } from "react";
-import "../components/styles/Register.css";
+import { useEffect, useState } from "react";
+// import "../components/styles/Register.css";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-function Register() {
+function RegisterValidation2() {
   const router=useNavigate()
+  const [errors,setErrors]=useState({
+    name: "Name is Required",
+    email: "Email is Required",
+    password: "Password is Required",
+    confirmPassword: "Confirmpassword is Required",
+  })
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -50,7 +56,38 @@ function Register() {
   // myobject.hi = "hii";
   // myobject[event.target.name] = event.target.value
   // {[event.target.name] : event.target.value}
-
+  useEffect(()=>{
+    const errors={};
+    if(userData.name){
+        errors["name"]="";
+        // setErrors({...errors, ["name"]: ""});
+    }else{
+        errors["name"]="Name is Required";
+        // setErrors({...errors, ["name"]: "Name is Required"}); 
+    }
+    if(userData.email){
+        errors["email"]="";
+        // setErrors({...errors, ["email"]: ""});
+    }else{
+        errors["email"]="email is Required";
+        // setErrors({...errors, ["email"]: "email is Required"}); 
+    }
+    if(userData.password){
+        errors["password"]="";
+        // setErrors({...errors, ["password"]: ""});
+    }else{
+        errors["password"]="password is Required";
+        // setErrors({...errors, ["password"]: "password is Required"}); 
+    }
+    if(userData.confirmPassword){
+        errors["confirmPassword"]="";
+        // setErrors({...errors, ["confirmPassword"]: ""});
+    }else{
+        errors["confirmPassword"]="confirmPassword is Required";
+        // setErrors({...errors, ["confirmPassword"]: "confirmPassword is Required"}); 
+    }
+    setErrors(errors);
+  },[userData]);
   return (
 
     <div className="parentdiv">
@@ -67,6 +104,7 @@ function Register() {
             placeholder="Type your name.."
             name="name"
           />
+          {errors?.name && <p>{errors?.name}</p>}
           <br />
           <label>Email</label>
           <br />
@@ -76,6 +114,7 @@ function Register() {
             placeholder="Type your email.."
             name="email"
           />
+           {errors?.email && <p>{errors?.email}</p>}
           <br />
           <label>Password </label>
           <br />
@@ -85,6 +124,7 @@ function Register() {
             placeholder="Type your password.."
             name="password"
           />
+           {errors?.password && <p>{errors?.password}</p>}
           <br />
           <label>ConfirmPassword </label>
           <br />
@@ -94,6 +134,7 @@ function Register() {
             placeholder="Confirm your password.."
             name="confirmPassword"
           />
+           {errors?.confirmPassword && <p>{errors?.confirmPassword}</p>}
           <br />
           <input className="button" type="submit" value="Register" />
         </form>
@@ -101,4 +142,4 @@ function Register() {
     </div>
   );
 }
-export default Register;
+export default RegisterValidation2;

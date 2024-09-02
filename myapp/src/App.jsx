@@ -18,6 +18,8 @@ import Mapping from "./components/24-08/Mapping";
 import Todo from './components/25-08/Todo';
 import Mapping2 from "./components/24-08/Mapping2";
 import Dynamicstyling from "./components/29-08/Dynamicstyling";
+import RegisterValidation from './components/31-08/RegisterValidation';
+import RegisterValidation2 from './components/31-08/RegisterValidation2';
 
 
 
@@ -39,6 +41,8 @@ function App() {
     <Route path="/" element={<Home/>}/>
     <Route path="/login" element={<Login/>}/>
     <Route path="/register" element={<Register/>}/>
+    <Route path="/register-validation" element={<RegisterValidation/>}/>
+    <Route path="/register-validation2" element={<RegisterValidation2/>}/>
     <Route path='/counter' element={<Counter/>}/>
     <Route path='/useeffect1' element={<UseEffect1/>}/>
     <Route path='/useeffect2' element={<UseEffect2/>}/>

@@ -8,9 +8,9 @@ function Navbar() {
     // function Tohome() {
     //     router("/");
     // }
-    // function Tologin() {
-    //     router("/login");
-    // }
+    function Tologin() {
+        router("/login");
+    }
     // function Toregister() {
     //     router("/register");
     // }
@@ -49,7 +49,7 @@ function Navbar() {
     return (
         <div className="parentDiv">
             {/* {/* <h1 onClick={Tohome}>Home</h1> */}
-            {/* <h1 onClick={Tologin}>Login</h1> */}
+            <h1 onClick={Tologin}>Login</h1>
             {/* {/* <h1 onClick={Toregister}>Register</h1> */  }
             <h1 onClick={Tocounter}>Counter</h1>
             <h1 onClick={ToredirectEffect1}>useEfft1</h1>
