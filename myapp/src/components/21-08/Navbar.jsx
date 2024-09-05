@@ -5,15 +5,15 @@ import "../styles/Navbar.css";
 function Navbar() {
     const router = useNavigate();
 
-    // function Tohome() {
-    //     router("/");
-    // }
+    function Tohome() {
+        router("/");
+    }
     function Tologin() {
         router("/login");
     }
-    // function Toregister() {
-    //     router("/register");
-    // }
+    function Toregister() {
+        router("/register");
+    }
 
     function Tocounter(){
         router("/counter");
@@ -48,10 +48,10 @@ function Navbar() {
 
     return (
         <div className="parentDiv">
-            {/* {/* <h1 onClick={Tohome}>Home</h1> */}
+            { <h1 onClick={Tohome}>Home</h1> }
             <h1 onClick={Tologin}>Login</h1>
-            {/* {/* <h1 onClick={Toregister}>Register</h1> */  }
-            <h1 onClick={Tocounter}>Counter</h1>
+            { <h1 onClick={Toregister}>Register</h1> }
+            {/* <h1 onClick={Tocounter}>Counter</h1>
             <h1 onClick={ToredirectEffect1}>useEfft1</h1>
             <h1 onClick={ToredirectEffect2}>useEfft2</h1>
             <h1 onClick={ToredirectEffect3}>useEft3</h1>
@@ -60,7 +60,7 @@ function Navbar() {
             <h1 onClick={Topropdrilling}>PropDrilling</h1>
             <h1 onClick={Tomapping}>Mapping1</h1>
             <h1 onClick={Tomapping2}>Mapping2</h1>
-            <h1 onClick={Todo}>Todo</h1>
+            <h1 onClick={Todo}>Todo</h1> */}
             
         </div>
     );

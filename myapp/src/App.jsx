@@ -21,6 +21,7 @@ import Dynamicstyling from "./components/29-08/Dynamicstyling";
 import RegisterValidation from './components/31-08/RegisterValidation';
 import RegisterValidation2 from './components/31-08/RegisterValidation2';
 import UseReducer from './components/1-09/UseReducer';
+import UseContext from './components/03-09/UseContext';
 
 
 
@@ -60,6 +61,8 @@ function App() {
      <Route path='/todo' element={<Todo/>}/>
      <Route path='/dynamicstyling' element={<Dynamicstyling/>}/>
      <Route path='/usereducer' element={<UseReducer/>}/>
+     <Route path='/usecontext' element={<UseContext/>}/>
+     
      
   </Routes>
 
