@@ -24,6 +24,8 @@ import UseReducer from './components/1-09/UseReducer';
 import UseContext from './components/03-09/UseContext';
 import Login1 from './components/5-09 context/Login1';
 import UseMemo from './components/5-09 context/UseMemo';
+import Memo from './components/10-09/memo';
+import AnotherComponent from './components/10-09/AnotherComponent';
 
 
 
@@ -67,6 +69,8 @@ function App() {
      <Route path='/usecontext' element={<UseContext/>}/>
      <Route path='/login1' element={<Login1/>}/>
      <Route path='/usememo' element={<UseMemo/>}/>
+     <Route path='/memo' element={<Memo/>}/>
+     <Route path='/anothercomponent' element={<AnotherComponent/>}/>
 
 
      
