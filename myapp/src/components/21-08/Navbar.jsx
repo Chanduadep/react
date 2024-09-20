@@ -45,6 +45,9 @@ function Navbar() {
     function Tomapping2(){
         router("/mapping2")
     }
+    function ToProducts(){
+        router("/getproducts")
+    }
 
     return (
         <div className="parentDiv">
@@ -61,6 +64,7 @@ function Navbar() {
             <h1 onClick={Tomapping}>Mapping1</h1>
             <h1 onClick={Tomapping2}>Mapping2</h1>
             <h1 onClick={Todo}>Todo</h1> */}
+            <h1 onClick={ToProducts}>Products</h1>
             
         </div>
     );
