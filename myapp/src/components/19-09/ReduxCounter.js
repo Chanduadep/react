@@ -19,8 +19,8 @@ const ReduxCounter = () => {
     <div>
       <h1>ReduxCounter</h1>
       <h2>Counter : {counter}</h2>
-      <button onClick={IncrementCounter}>Increment</button>
-      <button onClick={DecrementCounter}>Decrement</button>
+      <button onClick={IncrementCounter} >Increment</button>
+      <button onClick={DecrementCounter}>Decrement</button><br/>
       <button onClick={ResetCounter}>Reset</button>
     </div>
   );
