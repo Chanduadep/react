@@ -1,0 +1,32 @@
+body{
+    background-color: #defcf9;
+}
+.weather-parent{
+    padding: 1.2rem 2.5rem;
+    background-color: #00bbf0;
+    border-radius: 0.5rem;
+    max-width: 490px;
+    margin: 0 auto;
+    margin-top: 60px;
+
+}
+.weather-parent h2{
+    color: #f8f398;
+}
+.h3-mar{
+    padding-top: 14px;
+    color: white;
+}
+.input-field{
+    height: 30px;
+    width: 100%;
+    background-color: #fbf2d5;
+    border: none;
+    border-radius: 8px;
+}
+.butt{
+    border-radius: 5px;
+    height: 25px;
+    margin-top: 10px;
+
+}

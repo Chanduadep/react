@@ -48,6 +48,7 @@ function App() {
     setCounter(counter+1);
   }
   return(
+    <div className='App'>
   <> 
   <Navbar />
   <Routes>
@@ -91,6 +92,7 @@ function App() {
   </Routes>
 
   </>
+  </div>
   );
 }
 

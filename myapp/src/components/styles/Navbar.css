@@ -1,7 +1,7 @@
 .parentDiv{
     display: flex;
     border: 1px solid rgb(187, 182, 182);
-    background-color: rgb(213, 222, 135);
+    background-color: #005792;
     justify-content: space-around;
     height: 60px;
     align-items:center ;
