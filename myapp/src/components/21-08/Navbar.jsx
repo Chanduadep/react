@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../styles/Navbar.css";
+import { AuthContext } from '../Context/AuthContext';
 
 function Navbar() {
     const router = useNavigate();
+    const {state}=useContext(AuthContext)
 
     function Tohome() {
         router("/");
@@ -53,6 +55,7 @@ function Navbar() {
         <div className="parentDiv">
             { <h1 onClick={Tohome}>Home</h1> }
             <h1 onClick={Tologin}>Login</h1>
+            {state?.user?.name && <h1>welcome!!{state?.user?.name}</h1>}
             { <h1 onClick={Toregister}>Register</h1> }
             {/* <h1 onClick={Tocounter}>Counter</h1>
             <h1 onClick={ToredirectEffect1}>useEfft1</h1>
@@ -65,6 +68,8 @@ function Navbar() {
             <h1 onClick={Tomapping2}>Mapping2</h1>
             <h1 onClick={Todo}>Todo</h1> */}
             <h1 onClick={ToProducts}>Products</h1>
+            
+          
             
         </div>
     );

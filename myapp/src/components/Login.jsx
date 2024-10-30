@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import "../components/styles/login.css";
+import { useNavigate } from "react-router-dom";
+import api from "./index"
+import axios from "axios";
+import { AuthContext } from './Context/AuthContext';
 
 
 function Login(){
+  const {dispatch}=useContext(AuthContext)
+  const router=useNavigate()
     const [formError,setFormError]=useState({})
     const [userData,setUserData]=useState({
         email:"",
@@ -23,14 +29,18 @@ function Login(){
             
         try {
           // const response = await axios.post('http://localhost:8000/api/v1/auth/register', { userData });
-          const response={
-            data:{success:true, message: "Registration succesfully completed.."},
-          };
+          let response=await api.post("/auth/login",{userData});
+          // const response={
+          //   data:{success:true, message: "Registration succesfully completed.."},
+          // };
           if (response.data.success) {
             // console.log(response);
             // alert(response.data.message)
+            dispatch({type:"LOGIN",payload:response.data.userData})
             toast.success(response.data.message);
-            // router('/login');
+            router("/");
+          }else{
+            toast.error(response.data.message)
           }
     
         } catch (error) {

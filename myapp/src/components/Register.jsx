@@ -4,6 +4,7 @@ import "../components/styles/Register.css";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import api from "./index"
 
 function Register() {
   const router=useNavigate()
@@ -26,15 +27,18 @@ function Register() {
           return toast.error("password and confirm password not matched")
         }
     try {
+      let response=await api.post("/auth/register",{userData});
       // const response = await axios.post('http://localhost:8000/api/v1/auth/register', { userData });
-      const response={
-        data:{success:true, message: "Registration succesfully completed.."},
-      };
+      // const response={
+      //   data:{success:true, message: "Registration succesfully completed.."},
+      // };
       if (response.data.success) {
         // console.log(response);
         // alert(response.data.message)
         toast.success(response.data.message);
         router('/login');
+      }else{
+        toast.error(response.data.message)
       }
 
     } catch (error) {

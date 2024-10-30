@@ -31,6 +31,7 @@ import AllProducts from './components/14-09/AllProducts';
 import UseRef from './components/15-09/UseRef';
 import ReduxCounter from './components/19-09/ReduxCounter';
 import Weather from './components/Weather/index';
+import index from './components/index';
 
 
 
