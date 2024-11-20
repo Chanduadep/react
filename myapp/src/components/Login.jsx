@@ -2,9 +2,10 @@ import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import "../components/styles/login.css";
 import { useNavigate } from "react-router-dom";
-import api from "./index"
+
 import axios from "axios";
 import { AuthContext } from './Context/AuthContext';
+import api from '.';
 
 
 function Login(){
@@ -45,7 +46,7 @@ function Login(){
     
         } catch (error) {
           console.log(error);
-          toast.error(error);
+          toast.error(error.response.data.message);
         }
       }else{
         toast.error("All fields are required")

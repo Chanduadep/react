@@ -32,6 +32,12 @@ import UseRef from './components/15-09/UseRef';
 import ReduxCounter from './components/19-09/ReduxCounter';
 import Weather from './components/Weather/index';
 import index from './components/index';
+import CreateProduct from './components/12-11/CreateProduct';
+import ViewProducts from './components/12-11/ViewProducts';
+import SingleProduct from './components/14-11/SingleProduct';
+
+
+
 
 
 
@@ -64,7 +70,7 @@ function App() {
     <Route path='/useeffect2' element={<UseEffect2/>}/>
     <Route path='/useeffect3' element={<UseEffect3/>}/>
     <Route path='/useeffect4' element={<UseEffect4/>}/>
-    <Route path='/products/:id' element={<UseParams/>}/>
+    {/* <Route path='/products/:id' element={<UseParams/>}/> */}
     <Route path='/props'
      element={<Propdrilling fname={["sneha","pooja","anaida"]}
      counter={counter}
@@ -85,7 +91,10 @@ function App() {
      <Route path='/use-ref' element={<UseRef/>}/>
      <Route path='/redux-counter' element={<ReduxCounter/>}/>
      <Route path='/weather' element={<Weather/>}/>
-     
+     <Route path='/create-product' element={<CreateProduct/>}/>
+     <Route path='/view-products' element={<ViewProducts/>}/>
+     <Route path='/product/:productId' element={<SingleProduct/>}/>
+
 
 
      
